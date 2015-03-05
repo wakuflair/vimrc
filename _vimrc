@@ -47,8 +47,13 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=$VIM/vimfiles/bundle/Vundle.vim
-let path='$VIM/vimfiles/bundle'
+if has("unix") 
+    set rtp+=~/.vim/bundle/Vundle.vim
+    let path='~/.vim/bundle'
+elseif has('win32') || has('win64')
+    set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+    let path='$VIM/vimfiles/bundle'
+endif
 call vundle#begin(path)
  " alternatively, pass a path where Vundle should install plugins
  "call vundle#begin('~/some/path/here')
@@ -418,7 +423,7 @@ set laststatus=2
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ %l:%c
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ \ %{&fenc==\"\"?&enc:&fenc}\ \ \ %l:%c 
-set statusline=%<%F\ %h%m%r\ %y\ %=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+"set statusline=%<%F\ %h%m%r\ %y\ %=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
