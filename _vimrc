@@ -91,7 +91,6 @@ call vundle#begin(path)
  Plugin 'scrooloose/nerdtree'
  Plugin 'bling/vim-airline'
  Plugin 'bling/vim-bufferline'
- Plugin 'tomasr/molokai'
 
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
@@ -301,7 +300,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme molokai
+colorscheme desert
 set background=dark
 
 " Set extra options when running in GUI mode
