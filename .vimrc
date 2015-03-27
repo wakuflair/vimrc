@@ -87,7 +87,7 @@ call vundle#begin(path)
  Plugin 'mbbill/fencview'
  Plugin 'tpope/vim-surround'
  Plugin 'tpope/vim-repeat'
- Plugin 'Yggdroot/indentLine'
+ "Plugin 'Yggdroot/indentLine'
  Plugin 'scrooloose/nerdtree'
  Plugin 'bling/vim-airline'
  Plugin 'bling/vim-bufferline'
