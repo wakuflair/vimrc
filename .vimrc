@@ -89,8 +89,10 @@ call vundle#begin(path)
  Plugin 'tpope/vim-repeat'
  "Plugin 'Yggdroot/indentLine'
  Plugin 'scrooloose/nerdtree'
+ Plugin 'scrooloose/nerdcommenter'
  Plugin 'bling/vim-airline'
  Plugin 'bling/vim-bufferline'
+ Plugin 'mattn/emmet-vim'
 
  " All of your Plugins must be added before the following line
  call vundle#end()            " required
